@@ -282,7 +282,7 @@ header.nav.scrolled .nav-in{padding:13px 32px}
 @media(max-width:640px){.pgrid{grid-template-columns:1fr}}
 .pcardx{background:color-mix(in srgb,var(--surface) 68%,transparent);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;transform-style:preserve-3d;position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:260px;cursor:none;backdrop-filter:blur(6px)}
 @media(max-width:860px){.pcardx{cursor:pointer}}
-.pcardx::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(139,123,253,.14),transparent 42%);opacity:0;transition:opacity .4s}
+.pcardx::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(139,123,253,.14),transparent 42%);opacity:0;transition:opacity .4s;pointer-events:none}
 .pcardx:hover::after{opacity:1}
 .pcardx:hover{border-color:var(--border-2);box-shadow:var(--shadow)}
 .pcardx.featured{grid-column:span 2;background:var(--grad-soft)}
@@ -300,7 +300,8 @@ header.nav.scrolled .nav-in{padding:13px 32px}
 .p-open{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.85rem;color:var(--accent);font-weight:500}
 .p-open svg{width:15px;height:15px;transition:transform .3s}
 .pcardx:hover .p-open svg{transform:translate(3px,-3px)}
-.p-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.p-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;position:relative;z-index:2}
+.p-link{position:relative;z-index:2}
 .p-link{display:inline-flex;align-items:center;gap:7px;font-family:'Inter';font-size:.82rem;font-weight:500;padding:8px 14px;border-radius:10px;border:1px solid var(--border);transition:.25s;cursor:none}
 @media(max-width:860px){.p-link{cursor:pointer}}
 .p-link svg{width:15px;height:15px}
